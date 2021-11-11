@@ -1,13 +1,17 @@
-import youtube_dl
+from PIL import Image, ImageDraw, ImageFont
+import textwrap
 import json
 
-url = input()
+meme = "step_shit"
+texts = ["Lorem ipsum dolor", "sit amet, consectetur adipiscing elit.", "Curabitur sed ligula fermentum,","tincidunt leo nec, scelerisque sapie"]
 
-YDL_OPTIONS = {'format': 'bestaudio', 'ignoreerrors': True, 'age_limit': 0, 'noplaylist': True}
-try:
-    info =  youtube_dl.YoutubeDL(YDL_OPTIONS).extract_info(url, download=False)
-    with open('data.json', 'w') as outfile:
-        json.dump(info, outfile)
-    print(info)
-except:
-    print("indisponivel")
+with open('memes/dict.json') as json_file:
+    dict = json.load(json_file)
+img = Image.open(dict[meme]["file"])
+
+d1 = ImageDraw.Draw(img)
+font = ImageFont.truetype(font="fonts/calibri.ttf", size=30, encoding="utf-8")
+for position, text in zip( dict[meme]["positions"], texts):
+    text = textwrap.TextWrapper(width=30, break_long_words=False).fill(text)
+    d1.multiline_text(position, text, fill=(0,0,0), font=font, anchor="mm")
+# img.show()

@@ -1,0 +1,37 @@
+{
+    "step_shit": {
+        "file": "memes/step_on_shit.jpg",
+        "args": 1,
+        "positions": [[225, 545]]
+    },
+
+    "buttons": {
+        "file": "memes/buttons.jpg",
+        "args": 2,
+        "positions": [[130, 90], [290, 70]]
+    }, 
+
+    "drake": {
+        "file": "memes/drake.jpg",
+        "args": 2,
+        "positions": [[530, 115], [530, 410]]
+    },
+
+    "heart": {
+        "file": "memes/heart.jpg",
+        "args": 4,
+        "positions": [[310, 20], [135, 125], [135, 275], [135, 425]]
+    },
+
+    "trade_offer": {
+        "file": "memes/trade_offer.jpg",
+        "args": 2,
+        "positions": [[100, 225], [375, 225]]
+    },
+
+    "yellow_ball": {
+        "file": "memes/yellow_ball.jpg",
+        "args": 2,
+        "positions": [[390, 160], [75, 565]]
+    }
+}

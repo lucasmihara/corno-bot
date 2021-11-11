@@ -2,11 +2,12 @@ import discord
 from discord.ext import commands, tasks
 import os
 import music
+import funny
 from datetime import datetime
 import json
 import random
 
-cogs = [music]
+cogs = [music, funny]
 
 client = commands.Bot(command_prefix="~~", help_command=None)
 
